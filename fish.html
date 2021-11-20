@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import url("static/root.css");
+    </style>
+</head>
+<body>
+<header class="header">
+    <div> Evolution of <br>
+        Chinese Characters
+    </div>
+    <span class="home" onclick="window.location.href = 'index.html'"> Home</span>
+</header>
+
+<script>
+    function mouseup() {
+        let x = document.getElementById("myRange").value;
+        let num = Number(x)
+        if (num <= 16) {
+            document.getElementById("image").setAttribute("src","static/fish/1.png");
+            document.getElementById("title").innerHTML = 'Oracle bone script <br>About 1300 - 1100 BCE';
+            document.getElementById("ins").innerHTML = 'Oracle bone script was an ancestor of modern Chinese characters engraved on oracle bones, and is the earliest known form of Chinese writing. The oracle bone appears pictographic, its simplified, and rounded forms are often converted to rectilinear ones. The Oracle bone script are often arranged so that the columns begin near the centerline of the shell or bone, and move toward the edge, such that the two sides are ordered in mirror-image fashion.';
+        }
+        if (num>16 && num <= 32) {
+            document.getElementById("image").setAttribute("src","static/fish/2.png");
+            document.getElementById("title").innerHTML = 'Bronze script <br>About 1046-222 BCE';
+            document.getElementById("ins").innerHTML = 'Early bronze inscriptions were almost always cast (the writing was done with a stylus in the wet clay of the piece-mold from which the bronze was then cast), while later inscriptions were often engraved after the bronze was cast. Unlike Oracle bone script, In general, characters on ancient Chinese bronze inscriptions were arranged in vertical columns, written top to bottom.';
+        }
+        if (num>32 && num <= 48) {
+            document.getElementById("image").setAttribute("src","static/fish/3.png");
+            document.getElementById("title").innerHTML = 'Small seal script <br>About 222 BCE- 8 CE';
+            document.getElementById("ins").innerHTML = 'Before the Qin conquest of the six other major warring states in China, local styles of characters had evolved independently of one another for centuries, producing what is called the "Scripts of the Six States". However, under one unified government, diversity was deemed undesirable as it hindered the ruling in every aspect. Hence, Emperor Qin Shi Huang mandated the unification of weights, measures, currencies, etc., and the use of a standard writing script. Characters that were different from those found in Qin were discarded, and the Qin\'s small seal characters became the standard for all regions within the empire.';
+
+        }
+        if (num>48 && num <= 64) {
+            document.getElementById("image").setAttribute("src","static/fish/4.png");
+            document.getElementById("title").innerHTML = 'Clerical script <br>About 206 BCE – 420 CE';
+            document.getElementById("ins").innerHTML = 'The clerical script, also formerly chancery script, is an archaic style of Chinese calligraphy that evolved from the Warring States period to the Qin dynasty, was dominant in the Han dynasty, and remained in use through the Wei-Jin periods. Due to its high legibility to modern readers, it is still used for artistic flavor in a variety of functional applications such as headlines, signboards, and advertisements. This legibility stems from the highly rectilinear structure, a feature shared with the modern regular script. In structure and rectilinearity, it is generally similar to the modern script; however, in contrast with the tall to square modern script, it tends to be square to wide and often has a pronounced, wavelike flaring of isolated major strokes, especially a dominant rightward or downward diagonal stroke.';
+
+        }
+        if (num>64 && num <= 80) {
+            document.getElementById("image").setAttribute("src","static/fish/5.png");
+            document.getElementById("title").innerHTML = 'Regular script  <br>About 200 CE – present';
+            document.getElementById("ins").innerHTML = 'The regular script is the newest of the Chinese script styles (appearing by the Cao Wei dynasty c. 200 AD and maturing stylistically around the 7th century). Regular script characters with width (or length) larger than 5 cm are usually considered larger regular script, and those smaller than 2 cm are usually a small regular script. Those in between are usually called medium regular script. What these are relative to other characters.';
+
+        }
+        if (num>80) {
+            document.getElementById("image").setAttribute("src","static/fish/6.png");
+            document.getElementById("title").innerHTML = 'Simplified Chinese  <br>1956 – present';
+            document.getElementById("ins").innerHTML = 'Simplified Chinese characters are used in Mainland China, Malaysia and Singapore. The government has promoted them for use in printing since the 1950s to encourage literacy. Simplified character forms were created by reducing the number of strokes and simplifying the forms of a sizable proportion of Chinese characters. Some simplifications were based on popular cursive forms embodying graphic or phonetic simplifications of the traditional forms. Some characters were simplified by applying regular rules, for example, by replacing all occurrences of a certain component with a simplified version of the component. Variant characters with the same pronunciation and identical meaning were reduced to a single standardized character, usually the simplest amongst all variants in form.';
+
+        }
+    }
+</script>
+<div class="main">
+    <div class="item">
+        <span>Fish</span>
+        <b id="ins">
+            Oracle bone script was an ancestor of modern Chinese characters engraved on oracle bones, and is the earliest known form of Chinese writing. The oracle bone appears pictographic, its simplified, and rounded forms are often converted to rectilinear ones. The Oracle bone script are often arranged so that the columns begin near the centerline of the shell or bone, and move toward the edge, such that the two sides are ordered in mirror-image fashion.
+        </b>
+    </div>
+    <div class="content">
+        <div class="title" id="title">Oracle bone script <br>About 1300 - 1100 BCE</div>
+        <img src="static/fish/1.png" alt="" class="img" id="image">
+        <div>
+            <label>
+                <input type="range" min="0" max="100" value="0" class="input" id="myRange"  onmouseup="mouseup()"/>
+            </label>
+        </div>
+    </div>
+</div>
+</body>
+<style>
+    .item {
+        font-size: 20px;
+        background-color: #fff;
+        margin-left: 100px;
+        height: 500px;
+        vertical-align: top;
+        width:500px ;
+    }
+
+    .item span {
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 200px;
+    }
+    .content {
+        display: inline-block;
+        margin-left: 300px;
+    }
+    .input {
+        width: 300px;
+    }
+    .img{
+        padding-top: 80px;
+        width: 300px;
+        height: 300px
+    }
+    .title {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 50px;
+        text-align: center;
+    }
+</style>
+</html>

@@ -1,0 +1,209 @@
+body {
+    height: 75vh;
+    overflow-x: hidden !important;
+}
+
+.header {
+    background-color: #F68D95;
+    height: 35%;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.header div {
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.home {
+    float: right;
+    margin-right: 50px;
+    margin-top: 120px;
+    font-size: 20px;
+    background-color: #EE1C2C;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tips {
+    white-space: pre-wrap;
+    word-break: break-all;
+    background-color: #F68D95;
+    width: 23%;
+    margin-top: 50px;
+    border-radius: 30px;
+    margin-left: 50px;
+    line-height: 1.5em;
+    display: inline-block;
+}
+
+.item {
+    background-color: #F68D95;
+    width: 23%;
+    margin-top: 50px;
+    border-radius: 30px;
+    margin-left: 50px;
+    line-height: 1.5em;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 100px;
+    height: 200px;
+}
+
+.imageList {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 180px;
+    white-space: nowrap;
+    display: inline-block;
+}
+.item{
+    width: 300px;
+    height: 560px;
+    background-color: #F68D95;
+    margin: 0;
+    font-size: 15px;
+    text-align: start;
+    padding:0 10px;
+    white-space: pre-line;
+}
+
+.character {
+    width: 300px;
+    height: 300px;
+    background-color: #F68D95;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 120px 0 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+.character:hover {
+    background-color: #EE1C2C;
+}
+.character  div {
+    padding-top: 80px;
+}
+
+.img{
+    padding-top: 80px;
+    width: 300px;
+    height: 300px
+}
+
+#hero-slides {
+    margin-top: 50px;
+}
+
+#hero-slides #slides-cont {
+    position: relative;
+    --button-height: 6vh;
+    --button-spacing: 0.2vh;
+}
+#hero-slides #slides-cont .button {
+    width: 5vw;
+    height: var(--button-height);
+    background: #F68D95;
+    position: absolute;
+    right: 5.375vw;
+    top: 38vh;
+    z-index: 100;
+    cursor: pointer;
+}
+#hero-slides #slides-cont .button:before, #hero-slides #slides-cont .button:after {
+    line-height: var(--button-height);
+    position: absolute;
+    margin-left: -0.25vw;
+    pointer-events: none;
+    -webkit-transform: scale(0.75, 1.5);
+    transform: scale(0.75, 1.5);
+    transition: 125ms ease-in-out;
+}
+#hero-slides #slides-cont .button:before {
+    left: 50%;
+}
+#hero-slides #slides-cont .button:after {
+    opacity: 0;
+}
+
+#hero-slides #slides-cont #next {
+    margin-top: 120px;
+}
+#hero-slides #slides-cont #next:before, #hero-slides #slides-cont #next:after {
+    content: '>';
+}
+
+#hero-slides #slides-cont #prev {
+    opacity: calc(var(--page) + 0.5);
+    transition: 500ms opacity;
+    margin-top: 200px;
+}
+
+#hero-slides #slides-cont #prev:before, #hero-slides #slides-cont #prev:after {
+    content: '<';
+}
+#hero-slides #slides-cont #prev:after {
+    left: 70%;
+}
+#hero-slides #slides-cont #prev:hover:before {
+    left: 30%;
+}
+#hero-slides #slides-cont #next-catch,
+#hero-slides #slides-cont #prev-catch {
+    width: 10vw;
+
+    position: absolute;
+    top: 0;
+    z-index: 90;
+}
+#hero-slides #slides-cont #next-catch {
+    right: 0;
+}
+#hero-slides #slides-cont #prev-catch {
+    left: 0;
+}
+#hero-slides #slides {
+    width: auto;
+    height: var(--slides-height);
+    font-size: 0;
+    white-space: nowrap;
+    position: absolute;
+    -webkit-transform: translate3D(calc(var(--page) * -80vw), 0, 0);
+    transform: translate3D(calc(var(--page) * -80vw), 0, 0);
+    transition: 1500ms -webkit-transform cubic-bezier(0.7, 0, 0.3, 1);
+    transition: 1500ms transform cubic-bezier(0.7, 0, 0.3, 1);
+    transition: 1500ms transform cubic-bezier(0.7, 0, 0.3, 1), 1500ms -webkit-transform cubic-bezier(0.7, 0, 0.3, 1);
+}
+#hero-slides #slides .slide {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1.333em;
+    white-space: normal;
+    word-break: break-word;
+    position: relative;
+}
+
+@media (min-width: 1200px) and (max-width: 1699px) {
+    body {
+        --slides-per-page: 3;
+    }
+
+    #hero-slides #slides .slide {
+        font-size: 1vw;
+    }
+}
+@media (min-width: 1700px) {
+    body {
+        --slide-per-age: 4;
+    }
+
+    #hero-slides #slides .slide {
+        font-size: 0.75vw;
+    }
+}
